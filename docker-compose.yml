@@ -1,0 +1,98 @@
+# version: "3" 
+# services:
+#   # Services line define which Docker images to run. In this case, it will be MySQL server and WordPress image.
+#   db:
+#     image: mysql:5.7
+#     # image: mysql:5.7 indicates the MySQL database container image from Docker Hub used in this installation.
+#     restart: always
+#     environment:
+#       MYSQL_ROOT_PASSWORD: MyR00tMySQLPa$$5w0rD
+#       MYSQL_DATABASE: Rythm1nTh3V1llag3d3v
+#       MYSQL_USER: Rythm1nTh3V1llag3
+#       MYSQL_PASSWORD: EC9tzxkQXA7ZncY$$4
+#       # Previous four lines define the main variables needed for the MySQL container to work: database, database username, database user password, and the MySQL root password.
+#   wordpress:
+#     depends_on:
+#       - db
+#     image: wordpress:6.2-php8.0-fpm-alpine
+#     restart: always
+#     # Restart line controls the restart mode, meaning if the container stops running for any reason, it will restart the process immediately.
+#     ports:
+#       - "8000:80"
+#       # The previous line defines the port that the WordPress container will use. After successful installation, the full path will look like this: http://localhost:8000
+#     environment:
+#       WORDPRESS_DB_HOST: db:3306
+#       WORDPRESS_DB_USER: Rythm1nTh3V1llag3
+#       WORDPRESS_DB_PASSWORD: EC9tzxkQXA7ZncY$$4
+#       WORDPRESS_DB_NAME: Rythm1nTh3V1llag3d3v
+# # Similar to MySQL image variables, the last four lines define the main variables needed for the WordPress container to work properly with the MySQL container.
+#     volumes:
+#       ["./:/var/www/html"]
+# volumes:
+#   mysql: {}
+
+version: "3.7" 
+# Defines which compose version to use
+services:
+  # Services line define which Docker images to run. In this case, it will be MySQL server and WordPress image.
+  db:
+    image: mysql:5.7
+    # image: mysql:5.7 indicates the MySQL database container image from Docker Hub used in this installation.
+    restart: always
+    environment:
+
+      # docker wp config settings
+      MYSQL_ROOT_PASSWORD: ~7kyOAy6Rvvd3F@CWz<Qvx6qJ
+      MYSQL_DATABASE: Rythm4Pr0dDB
+      MYSQL_USER: Rythm1nTh3V1llag3
+      MYSQL_PASSWORD: H$ApsHx^OG#|7ha*
+      # Previous four lines define the main variables needed for the MySQL container to work: database, database username, database user password, and the MySQL root password.
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: db
+      PMA_USER: Rythm1nTh3V1llag3
+      PMA_PASSWORD: H$ApsHx^OG#|7ha*
+    ports:
+      - 10001:80
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    restart: always
+    # Restart line controls the restart mode, meaning if the container stops running for any reason, it will restart the process immediately.
+    ports:
+      - "9001:80"
+      # The previous line defines the port that the WordPress container will use. After successful installation, the full path will look like this: http://localhost:8000
+    environment:
+
+
+      # debug mode
+      WORDPRESS_DEBUG: 1
+
+      # docker wp config settings 
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: Rythm1nTh3V1llag3
+      WORDPRESS_DB_PASSWORD: H$ApsHx^OG#|7ha*
+      WORDPRESS_DB_NAME: Rythm4Pr0dDB
+      WORDPRESS_TABLE_PREFIX: wp_
+# Similar to MySQL image variables, the first four lines define the main variables needed for the WordPress container to work properly with the MySQL container.
+    
+          # our local dev environment
+      WORDPRESS_CONFIG_EXTRA: |
+
+        /* development parameters */
+        define('WP_CACHE', false);
+        define('ENVIRONMENT', 'local');
+        
+    volumes:
+      - ./uploads:/var/www/html/wp-content/uploads
+      - ./logs:/var/www/html/wp-content/logs
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./error-logging.ini:/usr/local/etc/php/conf.d/error-logging.ini
+      - ./:/var/www/html
+
+      # ["./:/var/www/html"]
+volumes:
+  mysql: {}

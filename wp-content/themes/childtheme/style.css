@@ -1,0 +1,390 @@
+/*
+Theme Name:   Child Theme of Restaurantz
+Theme URI:    http://altitudeagency.com/
+Description:  Restaurantz Child Theme
+Author:       Ryan
+Author URI:   http://example.com
+Template:     restaurantz
+Version:      1.0.0
+*/
+
+div#content.site-content {
+	padding:0;
+}
+div#primary.content-area {
+	padding:0;
+}
+div.container {
+	padding:0;
+}
+footer{
+	display: none;
+}
+.container{
+	width:100%!important;
+}
+p:empty {display: none;}
+/* .home_specials, .home_menu {
+	margin-bottom:2px;
+} */
+/* .home_specials {
+	margin-bottom:2px;
+} */
+.home_weekly_specials_txt {
+	margin-top:25px;
+	margin-bottom:30px;
+}
+.home_weekly_specials_button {
+	padding:25px 0;
+}
+#wpforms-165 {
+	margin:1px;
+}
+.wpforms-form {
+    background-color: #ccc !important;
+}
+@media screen and (min-width: 640px) {
+	#wpforms-form-165 > div.wpforms-field-container {
+		margin:0 25%;
+	}
+}
+#wpforms-form-165 > div.wpforms-submit-container {
+	margin:0 25%;
+}
+/*  */
+#wpforms-211 {
+	margin:1px;
+}
+.wpforms-form {
+    background-color: #ccc !important;
+}
+@media screen and (min-width: 640px) {
+	#wpforms-form-211 > div.wpforms-field-container {
+		margin:0 25%;
+	}
+}
+#wpforms-form-211 > div.wpforms-submit-container {
+	margin:0 25%;
+}
+/*  */
+#wpforms-230 {
+	margin:1px;
+}
+.wpforms-form {
+    background-color: #ccc !important;
+}
+@media screen and (min-width: 640px) {
+	#wpforms-form-230 > div.wpforms-field-container {
+		margin:0 25%;
+	}
+}
+#wpforms-form-230 > div.wpforms-submit-container {
+	margin:0 25%;
+}
+/* CSS for CF 7*/
+.whole-form {
+	display:flex;
+	max-width: 10000px;
+	max-height:75px;
+  margin: 0 auto;
+	background-color: rgb(255,195,0);
+	text-align:center;
+}
+.field-space {
+	padding-right:30px;
+}
+#newsletter-text {
+	margin-top:23px; 
+	width:33%;
+	font-size:25px;
+	font-weight:bold;
+}
+#newsletter-email {
+	line-height:12px;
+	font-size:12px;
+	border: none;
+	border:solid 1px #ccc;
+	border-radius: 4px;
+}
+
+#newsletter-submit {
+	background-color:#ffffff;
+	color:#21759b;
+	font-size:12px;
+	padding:8px 25px;
+	border: none;
+	border:solid 1px #fff;
+	border-radius: 2px;
+}
+.submit-button {
+	padding:25px 10px;
+	margin-top:-5px;
+}
+@media only screen and (max-width:1290px) {
+ 	#newsletter-text {font-size:20px;width:33%;
+	}
+	.field-space {
+	padding-right:0px;
+}
+}
+@media only screen and (max-width:1310px) {
+ 	#newsletter-email {
+		width:98%;
+	}
+	#newsletter-submit {
+		padding: 8px  15px;
+	}
+}
+
+@media only screen and (max-width:945px) {
+ 	#newsletter-email {
+		width:95%;
+	}
+	#newsletter-submit {
+		padding: 8px  10px;
+	}
+}
+@media only screen and (max-width:940px) {
+	.whole-form {
+		flex-direction: column;
+		max-height:500px;
+	}
+	#newsletter-text {
+		margin:auto;
+		width:100%;
+	}
+	.field-space {
+		margin: 0px 0;
+	}
+	.submit-button {
+		padding:15px 0;
+	}
+	#wpcf7-f262-p2-o1 > form > div.whole-form > div.submit-button > p > span {
+		display:none;
+	}	
+}
+@media only screen and (max-width:938px) {
+	#newsletter-text {
+		display: inline-block
+	}
+ 	#newsletter-email {
+		width:98%;
+	}
+	#newsletter-submit {
+		padding: 8px  10px;
+	}
+	#site-identity > p.site-title > a {
+		font-size:30px;
+	}
+}
+@media only screen and (max-width:800px) {
+	#newsletter-text {
+		display: inline-block
+	}
+ 	#newsletter-email {
+		width:95%;
+	}
+	#newsletter-submit {
+		width:95%;
+		padding: 8px  10px;
+		color:#ffffff;
+		background-color:#21759b;
+		border :none;
+	}
+}
+/* END */
+/* CSS FOR CF7 - Contact US */
+div.contact-us-div {
+ margin: 0 auto;
+ padding: 0 5%;
+}
+div.satisfaction-div {
+ padding:15% 0;
+ margin: 0 auto;
+}
+.guarantee-text {
+	text-align:center;
+	padding: 0 5%;
+}
+div.contact-us-div input {
+	width:100%;
+}
+/* END */
+/* CSS FOR CF7 - Private Events And Catering */
+div.catering-page-div {
+    margin: 0 auto;
+    padding: 0 5%;
+}
+div.catering-page-div input {
+	width:100%;
+}
+   /* END */
+/* CSS FOR CF7 - Private Events And Catering */
+div.booking-page-div {
+    margin: 0 auto;
+    padding: 0 5%;
+}
+div.booking-page-div input {
+	width:100%;
+}
+   /* END */
+#btn-scrollup {
+	visibility:hidden;
+}
+.home-bands {
+	background-image: url("http://localhost:9000/wp-content/uploads/2023/09/plain-gray-paper-textured-background.jpg");
+	margin: 2px 0;
+	
+}
+.home-announcements {
+	margin:2px 0;
+}
+.contactus-header-text {
+	padding:25px 0;
+	text-decoration: underline rgb(255,195,0) 5px;
+}
+.guarantee-title {
+	font-size:18px;
+	font-weight:bold;
+	padding-bottom:10px;
+}
+.contactus-header-alt {
+	font-size:10px;
+}
+article.hentry {
+	margin:0px;
+}
+#home-contact-send {
+	background-color:#21759b;
+}
+#catering-send-request {
+	background-color:#21759b;
+}
+#booking-submit {
+	background-color:#21759b;
+}
+.home-viewevents-btn {
+	padding-bottom:7px;
+}
+.menu-price1 {
+	padding-bottom:100px;
+}
+.menu-daily {
+	padding-top:110px;
+}
+.catering-header-text {
+	padding:25px 0;
+	text-decoration: underline rgb(255,195,0) 5px;
+}
+.booking-header-text {
+	padding:25px 0 !important;
+	text-decoration: underline rgb(255,195,0) 5px !important;
+}
+.fa-bars {
+    float:right;
+}
+.home_menu {
+	margin-bottom: 2px !important;
+}
+
+/*
+*css for menu overlay
+*/
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0,0,0,0.8);
+    z-index: 1000;
+    cursor: pointer;
+} 
+#text{
+    position: absolute;
+    top: 50%;
+    width:100%;
+    left: 50%;
+    font-size: 20px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    text-align:center;
+}
+
+/* end */
+
+footer.site-footer {
+    display:none;
+}
+.show-menu {
+    display:block;
+}
+.hide-menu {
+    display:none;
+}
+#menu-header-menu {
+    list-style-type:none;
+}
+  
+#text > div > ul a:link {
+	color:#ffffff !important;
+}
+#text > div > ul a:visited {
+    color:#f9a400 !important;
+}
+#text > div > ul a:hover {
+    font-weight:bold !important;
+}
+.site-title a {
+    color: #f9a400 !important;
+}
+.site-title a:hover {
+    color: #ffffff !important;
+}
+
+/* css for order online*/
+@media only screen and (min-width:800px) {
+	.menu-item-30 {
+		background-color:orange;
+		border: 2px solid #ffffff;
+		border-radius:5px;
+	}
+	.menu-item-30:hover {
+		background-color:#f9a400;
+		border: 2px solid #808080;
+		border-radius:5px;
+	}
+	.menu-item-30 a:hover {
+	color:#808080;
+	}
+}
+/* fix display of image vs text */
+@media only screen and (min-width:799px) {
+	#masthead > div > div.site-branding > a {
+		display:none !important;
+	} 
+}
+@media only screen and (max-width:800px) {
+	#masthead > div > div.site-branding > a {
+		margin-right: 0 !important;
+	}
+	.site-title {
+		display:none !important;
+	}
+	.builder-overlap #masthead, #masthead {
+		padding:2px 0 !important;
+	}
+}
+
+/* fix margin at bottom of footer i.e. (primary/content-area) */
+.content-area {
+	margin-bottom: 0 !important;
+}
+.entry-footer {
+	margin-top: 0 !important;
+}
+  
